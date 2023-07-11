@@ -1,0 +1,108 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+/* default css */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    background-color: #7ed6df;
+}
+
+/* addnew_area */
+
+
+
+.settings img {
+    width: 25px;
+}
+
+.wrapper {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 265px);
+    gap: 15px;
+}
+
+.wrapper div {
+    /* height: 250px; */
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+}
+
+.add_box, .bottom_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add_box {
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.add_box .icon  {
+    border: 2px solid #7ed6df;
+    height: 78px;
+    width: 78px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.add_box .icon img {
+    width: 25px;
+}
+
+.add_box p {
+    color: #7ed6df;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.note p {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.note span {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    display: block;
+}
+
+.note .bottom_content {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.bottom_content {
+    align-items: flex-start;
+}
