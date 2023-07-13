@@ -195,6 +195,12 @@ header img {
 .popup_box, .popup_box .popup {
     opacity: 0;
     pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.popup_box.show, .popup_box .popup {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .popup_box .popup {
