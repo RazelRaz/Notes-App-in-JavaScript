@@ -141,11 +141,13 @@ body {
     transform-origin: bottom right;
 }
 
-.settings:hover .menu{
+/* .settings:hover .menu{
+    transform: scale(1);
+} */
+
+.settings.show .menu{
     transform: scale(1);
 }
-
-
 
 .bottom_content .settings .menu li {
     border-radius: 0;
