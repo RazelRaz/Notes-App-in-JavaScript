@@ -4,6 +4,7 @@ const close = document.querySelector('.close');
 const addNoteBtn = document.querySelector('button');
 const titleTag = document.querySelector('input');
 const descTag = document.querySelector('textarea');
+const settings = document.querySelector('.settings')
 
 const popupTitle = document.querySelector('header p');
 
@@ -63,13 +64,30 @@ showNotes()
 function showMenu(elem) {
     // console.log(elem.parentElement);
     elem.parentElement.classList.add('show');
-    //removeing show class from the settings menu on document click
-    // document.addEventListener('click', e => {
-    //     if(e.target.tagName != 'I' || e.target != elem){
-    //         elem.parentElement.classList.remove('show')
-    //     }
-    // })
 }
+// Close the menu when clicking anywhere in the window
+// Close the menu when clicking anywhere in the document
+// Close the menu when clicking anywhere in the document
+document.addEventListener('click', (event) => {
+    const clickedElement = event.target;
+    const menuContainers = document.querySelectorAll('.settings');
+  
+    // Check if the clicked element is inside any of the menu containers or the settings buttons
+    let isInsideMenu = false;
+    menuContainers.forEach((menuContainer) => {
+      if (menuContainer.contains(clickedElement) || clickedElement.className === 'settings') {
+        isInsideMenu = true;
+      }
+    });
+  
+    // If the clicked element is not inside any of the menu containers or the settings buttons, hide all menus
+    if (!isInsideMenu) {
+      menuContainers.forEach((menuContainer) => {
+        menuContainer.classList.remove('show');
+      });
+    }
+  });
+
 
 function deleteNote(noteId){
     let confirmDel = confirm('Are You Sure?? This will be removed forever..');
