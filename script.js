@@ -63,7 +63,7 @@ showNotes()
 function showMenu(elem) {
     // console.log(elem.parentElement);
     elem.parentElement.classList.add('show');
-    // removeing show class from the settings menu on document click
+    //removeing show class from the settings menu on document click
     // document.addEventListener('click', e => {
     //     if(e.target.tagName != 'I' || e.target != elem){
     //         elem.parentElement.classList.remove('show')

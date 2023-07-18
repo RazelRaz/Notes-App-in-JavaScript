@@ -104,6 +104,11 @@ body {
     
 }
 
+.note .details {
+    max-height: 165px;
+    overflow-y: auto;
+}
+
 .note .bottom_content {
     padding-top: 10px;
     border-top: 1px solid #ccc;
@@ -194,20 +199,37 @@ header img {
     z-index: 2;
 }
 
-.popup_box, .popup_box .popup {
+.popup_box {
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease;
 }
 
-.popup_box.show, .popup_box .popup {
+.popup_box.show {
     opacity: 1;
     pointer-events: auto;
 }
 
+.popup_box.show .popup {
+    top: 50% !important;
+}
+
+.popup_box .popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.popup_box .popup {
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+
 .popup_box .popup {
     position: absolute;
-    top: 50%;
+    /* top: 50%; */
+    top: -30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -279,5 +301,6 @@ form .row label{
     border-radius: 4px;
 }
 
-/* 23.05 */
+
+
 
